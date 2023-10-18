@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Qual é a música?</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+</head>
+  <body>
+    <div id="header">
+     
+    </div>
+      
+    <div class="title-container">
+      <h1>VOCÊ CONSEGUE ADIVINHAR TODAS AS MÚSICAS?</h1>
+      <h2>TESTE SEU CONHECIMENTO MUSICAL</h2>
+    </div>
+    
+    <input type="text" id="player-name" name="player-name" placeholder="Seu Nome">
+   
+    <button id="start-game" onclick="startGame()">Iniciar jogo</button>
+    <div id="game-container"></div>
+    <div id="album-container"></div>
+    <div id="error-message" class="hidden">
+      <p>Você errou! Tente novamente.</p>
+      <button id="try-again">Tentar Novamente</button>
+    </div>
+    
+    <div id="music-controls-container" class="hidden">
+    <img id="custom-image" class="hidden" src="./img/interroga.png" alt="logo">
+
+   <button id="play-music" class="hidden">
+  <i id="play-icon" class="fas fa-pause"></i>
+</button>
+<div class="score-container">
+  <p id="score">Pontuação: 0</p>
+  <div id="container"></div>
+    <button id="retryButton" style="display: none">Tentar Novamente</button></div>
+
+    <label id="lbl-resposta" for="resposta" class="hidden">Qual é a música?</label>
+    <input type="text" id="resposta" class="hidden"></input>
+    <button id="btn-resposta" class="hidden">Enviar</button>
+    </div>
+</body>
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
+<script src="script1.js"></script>
+</html>

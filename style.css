@@ -1,0 +1,294 @@
+/* Reset de estilos */
+html, body, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(./img/kanye.jpg) ; /* Cor de fundo verde do Spotify */
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  
+}
+
+/* Estilos para a mensagem de erro */
+#error-message {
+ 
+  position: absolute;
+  top: 50%; /* Ajuste a posição vertical conforme necessário */
+  left: 50%; /* Ajuste a posição horizontal conforme necessário */
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 0, 0, 0.809); /* Cor de fundo vermelha com transparência */
+  color: #fff; /* Cor do texto */
+  padding: 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+#score {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+#retryButton {
+  display: none;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#retryButton:hover {
+  background-color: #2980b9;
+}
+
+
+.score-container {
+  position: absolute;
+  top: 80px; /* Distância do topo da tela */
+  right: 150px; /* Distância da direita da tela */
+  background-color: #000000(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+  color: #fff; /* Cor do texto */
+  padding: 25px;
+  border-radius: 15px;
+  z-index: 1000; /* Certifique-se de que esteja acima de outros elementos */
+  border: 3.5px solid #b92588;
+  font-size: 17px;
+}
+
+/* Estilos para o texto da pontuação */
+#score {
+  margin: 0;
+}
+
+#music-controls-container {
+  text-align: center;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px, #fff;
+  padding: 20px;
+  width: 400px;
+  border: 2px solid #b92588;
+  border-radius: 15px;
+  
+}
+
+/* Estilos para os elementos dentro do contêiner de controles de música */
+#music-controls-container button,
+#music-controls-container label,
+#music-controls-container input[type="text"],
+#music-controls-container img {
+  margin: 10px; /* Adapte a margem conforme desejado */
+}
+
+/* Estilos para o botão "Play/Pause" */
+#play-music {
+  padding: 20px; /* Aumente o padding conforme necessário */
+  font-size: 24px; /* Aumente o tamanho da fonte conforme necessário */
+  color: #fff; /* Cor do ícone e do texto */
+  background: transparent; /* Fundo transparente */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.3s;
+  position: relative; /* Tornar a posição relativa */
+  left: 38%; /* Mova-o para a metade do contêiner horizontalmente */
+ 
+}
+
+#play-music:hover {
+  transform: scale(1.3); /* Efeito de escala no hover */
+}
+
+#resposta {
+  display: inline-block;
+}
+
+/* Estilos para o botão "Enviar" */
+#btn-resposta {
+  margin-top: 10px;
+  width: 150px;
+  height: auto;
+  padding: 10px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #b92588; /* Cor de fundo verde do Spotify */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  border-radius: 15px; /* Bordas redondas */
+  box-shadow: 0 4px 6px #af468c;; /* Sombra verde */
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  margin-bottom: 10px;
+}
+
+#btn-resposta:hover {
+  transform: scale(1.3);
+  background-color: #5a2147; /* Cor de fundo verde ligeiramente mais escura no hover */
+  box-shadow: 0 6px 8px #af468c; /* Sombra mais intensa no hover */
+}
+
+
+/* Estilos para a etiqueta "Qual é a música?" */
+#lbl-resposta {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px; /* Aumente o tamanho da fonte conforme necessário */
+  color: #ffffff; /* Cor do texto */
+  padding: 50px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para a imagem personalizada */
+#custom-image {
+  width: 250px; /* Ajuste a largura conforme desejado */
+  height: auto;
+  border-radius: 50%;
+  outline: none;
+}
+
+/* Estilos para o cabeçalho */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff; /* Cor do texto */
+  margin-top: -170;
+}
+
+/* Estilos para os elementos do jogo */
+#game-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estilos para o botão "Iniciar Jogo" */
+#start-game {
+  width: 250px;
+  padding: 15px;
+  background-color: #b92588; /* Cor de fundo verde do Spotify */
+  color: #fff; /* Cor do texto */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+  margin-top: 40px;
+  border-radius: 15px;
+  transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#start-game:hover {
+  background-color: #5a2147; /* Cor de fundo verde ligeiramente mais escura no hover */
+}
+
+/* Estilos para os botões de controle de música e resposta */
+button {
+  padding: 10px; /* Remova a largura fixa para que o botão se ajuste ao ícone */
+  background-color: #b92588; /* Cor de fundo verde do Spotify */
+  color: #fff; /* Cor do texto */
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #b92588; /* Cor de fundo verde ligeiramente mais escura no hover */
+}
+
+/* Estilos para a caixa de resposta */
+input[type="text"] {
+  width: 93%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: none; /* Inicialmente oculta */
+  text-align: center;
+  margin-bottom: 10px;
+  background-color: #fff; /* Cor de fundo branca para a caixa de resposta */
+  color: #000; /* Cor do texto na caixa de resposta */
+  font-size: 25px;
+}
+
+/* Classe para ocultar elementos */
+.hidden {
+  display: none;
+}
+
+/* Estilos para o título principal */
+/* Estilos para o título principal */
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  color: #fff; /* Cor do texto */
+  margin-top: 10px;
+  
+}
+
+/* Estilos para o subtítulo */
+h2 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #ffffff; /* Cor do texto */
+  margin-bottom: 60px;
+  margin-top: 10px;
+ 
+}
+
+
+/* Resto do seu CSS */
+
+/* Estilos para o cabeçalho */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -500px;
+  margin-bottom: 20px;
+  
+}
+
+#player-name {
+  padding: 10px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+#player-name::placeholder {
+  color: #888; /* Cor do placeholder */
+}
+
+#player-name:focus {
+  outline: none;
+}
+
+#player-name,
+img {
+  border-radius: 50%; /* Deixa a imagem e o campo de nome com bordas arredondadas */
+}
+
+.title-container {
+  box-sizing: border-box;
+  padding: 10px;
+  
+}
+
+
